@@ -1,0 +1,64 @@
+/* Fond global noir */
+.stApp {
+    background-color: #000000;
+    color: white;
+}
+    
+.stAppHeader {
+    background-color: #000000;
+    color: white;
+}
+
+/* Titres et sous-titres en bleu avec même police */
+h1, h2, h3, h4, h5, h6 {
+    color: #e516f8 !important;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center
+}
+
+/* Paragraphes en blanc */
+p {
+    color: white !important;
+}
+
+/* Sidebar fond noir */
+section[data-testid="stSidebar"] {
+    background-color: #2b2a2a !important;
+    
+}
+
+/* Tableaux et autres composants Streamlit */
+.css-1n76uvr, .css-1i9l1se, .stDataFrame {
+    background-color: #111111 !important;
+    color: white !important;
+}
+
+/* Boîtes d'entrée et sélection */
+input, textarea, .stSelectbox, .stTextInput, .stCheckbox {
+    background-color: #222222 !important;
+    color: white !important;
+}
+
+/* Partie active du slider (track déjà parcouru) */
+div[data-baseweb="slider"] > div > div:first-child {
+    background-color: #e516f8 !important;  /* Couleur de la portion déjà glissée */
+    height: 4px;  /* Épaisseur du trait */
+    border-radius: 4px;
+}
+
+
+
+/* Boutons du conteneur principal (texte noir, fond clair) */
+button[kind="primary"], .stButton button, .stDownloadButton button {
+    background-color: #e516f8 !important;  /* Fond clair */
+    color: white;            /* Texte blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+}
+
+/* Hover sur les boutons : léger changement */
+.stButton button:hover, .stDownloadButton button:hover {
+    background-color: #71067a!important;
+}
