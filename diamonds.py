@@ -407,10 +407,7 @@ def main():
                     return f"Erreur d'appel API : {response.status_code}"
             except Exception as e:
                 return f"Erreur : {str(e)}"
-        
-
-
-
+    
 
         # Récupérer les données de la dernière prédiction
         prediction_data = st.session_state.get('derniere_prediction_ml', {}) or st.session_state.get('derniere_prediction_dl')
