@@ -94,7 +94,7 @@ def main():
 
     st.title('DIAMALYZE')
 
-    if choice not in ["Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot"]
+    if choice not in ["Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot"]:
         st.subheader("Predicting Diamond's cut using Machine Learning and Deep Learning")
     
     # Load dataset
