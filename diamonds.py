@@ -363,9 +363,10 @@ def main():
         def is_question_relevant(question):
             return any(keyword.lower() in question.lower() for keyword in allowed_keywords)
 
+        API_KEY = st.secrets["Token1"]
         API_URL = "https://router.huggingface.co/hf-inference/models/microsoft/Phi-3.5-mini-instruct/v1/chat/completions"
         headers = {
-            "Authorization": f"Bearer {st.secrets['Token1']}",
+            "Authorization": f"Bearer {API_KEY}",
         }
 
         def query_hf_model(message, prediction_data=None):
