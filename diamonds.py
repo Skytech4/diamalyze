@@ -89,12 +89,12 @@ load_local_css("Css_projet/diamonds.css")
 def main():
 
     # Menu options
-    menu = ["Home", "Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot", "Groq"]
+    menu = ["Home", "Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot"]
     choice = st.sidebar.selectbox("Menu", menu)  
 
     st.title('DIAMALYZE')
 
-    if choice not in ["Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot", "Groq"]:
+    if choice not in ["Visualization And Analysis Dashboard", "Machine Learning", "Deep Learning", "ChatBot"]
         st.subheader("Predicting Diamond's cut using Machine Learning and Deep Learning")
     
     # Load dataset
@@ -363,10 +363,9 @@ def main():
         def is_question_relevant(question):
             return any(keyword.lower() in question.lower() for keyword in allowed_keywords)
 
-        secret = os.environ.get("Token1")
         API_URL = "https://router.huggingface.co/hf-inference/models/microsoft/Phi-3.5-mini-instruct/v1/chat/completions"
         headers = {
-            "Authorization": f"Bearer {secret}",
+            "Authorization": f"Bearer {st.secrets['Token1']}",
         }
 
         def query_hf_model(message, prediction_data=None):
